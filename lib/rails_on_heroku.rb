@@ -1,0 +1,2 @@
+module RailsOnHeroku
+end
