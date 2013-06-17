@@ -17,7 +17,7 @@ gem 'rails_on_heroku'
 Then run
 
 ```
-$ bundle install`
+$ bundle install
 ```
 
 Now you're good to go. See the Heroku Quick start guide for information on deploying
@@ -42,13 +42,15 @@ On Heroku, Nginx is not needed to run your application. Our [routing layer](http
 
 By default Rails4 will return a 404 if an asset is not handled via an external proxy such as Nginx. While this default behavior will help you debug your Nginx configuration, it makes a default Rails app with assets unusable on Heroku. To fix this we've released a gem `rails_serve_static_assets`.
 
-This gem, `rails_serve_static_assets`, enables your Rails server to deliver your assets instead of returning a 404. You can use this to populate an edge cache CDN, or serve files directly from your web app. This gives your app total control and allows you to do things like redirects, or setting headers in your Ruby code. To enable this behavior in your app we only need to set this one configuration option:
+This gem, `rails_serve_static_assets`, enables your Rails server to deliver your assets instead of returning a 404. You can use this to populate an edge cache CDN, or serve files directly from your web app. This gives your app total control and allows you to do things like redirects, or setting headers in your Ruby code. To enable this behavior in your app we only need to set this one configuration option through this gem:
 
 ```
 config.serve_static_assets = true
 ```
 
-Once you've got that set, now your application can take control of how your assets are served. All you need to do to get this functionality of both gems is add the `rails_on_heroku` gem to your project.
+Note: this gem will set this value for you, you don't need to change any configuration manually.
+
+All you need to do to get this functionality of both gems is add the `rails_on_heroku` gem to your project.
 
 ## Why?
 
