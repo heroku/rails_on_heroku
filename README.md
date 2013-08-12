@@ -1,4 +1,6 @@
-# Rails on Heroku
+# Deprecated Use http://github.com/heroku/rails_12factor Instead
+
+## Rails on Heroku
 
 Makes running your Rails app on Heroku easier.
 
